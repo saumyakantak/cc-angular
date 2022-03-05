@@ -6,8 +6,162 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+  <!-- Custom CSS --> -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
 <body>
-  <app-root></app-root>
+  <!-- <app-root></app-root> -->
+  <!-- <router-outlet></router-outlet> -->
+
+  <div align="center" class="header"><h1>CopperCloud IoT Emulator</h1></div>
+        <div class='oblique' align="center" ><h4>Control Virtual Devices from the Real World</h4></div>
+
+        <div align="center" class="mqtt">
+          <table><tr><td></td></tr>
+            <tr>
+            <td><label>MQTT Server Address:</label><input type="text" id="mqtt_server" value="test.coppercloud.in"/></td>
+            <td><label>Websocket Port:  </label><input type="text" id="mqtt_port" value="9001"/></td>
+            <td><label>MQTT Topic:</label><input disabled type="text" id="mqtt_subtopic" value="iot-emulator/#"></td>
+            <td><button class="w3-button w3-blue" onclick="sub_mqtt_msg()">SUBSCRIBE</button></td>
+          </tr>
+          </table>
+        </div> 
+
+        <div align="center" class="devices">
+            <table class="incoming">
+                <tr >
+                    <td>
+                        <h4><div>Incoming Message:</div></h4>
+                        <div id='msgIncoming'></div>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="main-container">
+                <div class="elements">
+                    <img  
+                    draggable="true" 
+                    ondragstart="drag(event)" 
+                    id="img-light" 
+                    src="https://previews.123rf.com/images/ericmilos/ericmilos0912/ericmilos091200136/6109526-3d-render-of-light-bulb-on-white.jpg" 
+                    alt="iot-emulator/light">
+                </div>
+                <div class="elements">
+                    <img 
+                    draggable="true" 
+                    ondragstart="drag(event)" 
+                    id="img-motor" 
+                    src="assets/images/static-fan.png" 
+                    alt="iot-emulator/motor">
+                </div>
+                <div class="elements">
+                    <img 
+                    draggable="true" 
+                    ondragstart="drag(event)" 
+                    id="img-sensor" 
+                    src="assets/images/images.png" 
+                    alt="iot-emulator/sensor">
+                </div>
+                <div class="elements">
+                    <img 
+                    draggable="true" 
+                    ondragstart="drag(event)" 
+                    id="img-pir" 
+                    src="assets/images/pir.jpg" 
+                    alt="iot-emulator/pir">
+                </div>
+                <div class="elements">
+                    <img 
+                    draggable="true" 
+                    ondragstart="drag(event)" 
+                    id="img-gas" 
+                    src="assets/images/gas-sensor.jpg" 
+                    alt="iot-emulator/gas">
+                </div>
+                <div class="elements">
+                    <img 
+                    draggable="true" 
+                    ondragstart="drag(event)" 
+                    id="img-humidity" 
+                    src="assets/images/humdity-sensor.jpg" 
+                    alt="iot-emulator/humidity">
+                </div>
+                <div class="elements">
+                    <img 
+                    draggable="true" 
+                    ondragstart="drag(event)" 
+                    id="img-light-sensor" 
+                    src="assets/images/light-sensor.jpg" 
+                    alt="iot-emulator/light-sensor">
+                </div>
+                <div class="elements">
+                    <img 
+                    draggable="true" 
+                    ondragstart="drag(event)" 
+                    id="img-pressure" 
+                    src="assets/images/pressure-sensor.jpg" 
+                    alt="iot-emulator/pressure">
+                </div>
+                <div class="elements">
+                    <img 
+                    draggable="true" 
+                    ondragstart="drag(event)" 
+                    id="img-switch" 
+                    src="assets/images/switch.jpg" 
+                    alt="iot-emulator/switch">
+                </div>
+                <div class="elements">
+                    <img 
+                    draggable="true" 
+                    ondragstart="drag(event)" 
+                    id="img-lock" 
+                    src="assets/images/lock.jpg" 
+                    alt="iot-emulator/lock">
+                </div>
+                <div class="elements">
+                    <img 
+                    draggable="true" 
+                    ondragstart="drag(event)" 
+                    id="img-camera" 
+                    src="assets/images/camera.png" 
+                    alt="iot-emulator/camera">
+                </div>
+                <div class="elements">
+                    <img 
+                    draggable="true" 
+                    ondragstart="drag(event)" 
+                    id="img-heart" 
+                    src="assets/images/heartbeat.jpg" 
+                    alt="iot-emulator/heart">
+                </div>
+            </div>
+        </div>
+        <div>
+            <form action="" id="form">
+                <label for="topic">Topic</label><br>
+                <input type="text" id="topic" name="topic" value="iot-emulator/"><br><br>
+                <input type="button" name="submit" value="SUBMIT" onclick="sendData(event)"/>
+                <input type="button" name="delete" value="DELETE" onclick="deleteData(event)"/>
+            </form>
+        </div>
+        <!-- <button id="pirBtn" >Movement</button> -->
+        <div class="canvas-h">
+            <h3 class="canvas-h3">CANVAS</h3>
+        </div>
+        <section onmousedown ="dragElement(event)" >
+            <div class="canvas" ondrop="drop(event)" ondragover="allowDrop(event)">
+            
+            </div>
+        </section>
+    
+    <!-- Bootstrap JavaScript -->
+        <script src="assets/js/custom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
 </body>
 </html>

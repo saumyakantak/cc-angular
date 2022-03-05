@@ -1,0 +1,176 @@
+/* Small Devices */
+@media only screen and (max-width: 767px) {
+    
+    footer{
+        display: none;
+    }
+    .end{
+        display: none;
+    }
+    
+    /*=======================Header========================*/
+    .header-overlay .container .row .col{
+        margin: 0;
+        font-size: 13px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .header-overlay .container .row .col img{
+        height: 10px;
+    }
+    .dot{
+        display: inline-block;
+        width: 1px;
+        height: 1px;
+        border-radius: 50%;
+    }
+
+    /*===================================Tab Under Header=========================*/
+    .tab{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    /*========================dropBox=====================*/
+    .categories .container .row .col-md-8 .dbox{
+        font-size: 16px;
+        background-color: #E5E8EA;
+        margin-bottom: 174px;
+    }
+
+    
+    /*================Beats headphones================*/
+    .categories .container .row .col-md-8 .col-md-12{
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+    }
+    .categories .container .row .col-md-8 .hf{
+        background-color: #E5E8EA;
+        display: inline-block;
+        width: 30.9%;
+        height: auto;
+    }
+    .categories .container .row .col-md-8 .hf img{
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+    .mid-img{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .categories .container .row .col-md-8 .hf .container{
+        height: 100%;
+        width: 100%;
+    }
+    .categories .container .row .col-md-8 .hf .container .txt{
+        font-family: "ProximaNova";
+        text-align: center;
+        font-size: 12px;
+        height: 100%;
+        width: 100%;
+    }
+    /*=================Page Number==================*/
+
+    .categories .container .row .col-md-8 .num{
+        font-size: 16px;
+        text-align: center;
+        padding-top: 20px;
+        height: 57px;
+    }
+}
+
+/* Small Devices And Tablets */
+@media only screen and (max-width: 768px) {
+    
+    footer{
+        display: none;
+    }
+    .end{
+        display: none;
+    }
+    /*=======================Header========================*/
+    .header-overlay .container .row .col{
+        margin: 0;
+        font-size: 13px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .header-overlay .container .row .col img{
+        height: 10px;
+    }
+    .dot{
+        display: inline-block;
+        width: 1px;
+        height: 1px;
+        border-radius: 50%;
+    }
+
+    /*===================================Tab Under Header=========================*/
+    .tab{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    /*========================dropBox=====================*/
+    .categories .container .row .col-md-8 .dbox{
+        font-size: 16px;
+        background-color: #E5E8EA;
+        margin-bottom: 174px;
+    }
+
+    
+    /*================Beats headphones================*/
+    .categories .container .row .col-md-8 .col-md-12{
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+    }
+    .categories .container .row .col-md-8 .hf{
+        background-color: #E5E8EA;
+        display: inline-block;
+        width: 30.9%;
+        height: auto;
+    }
+    .categories .container .row .col-md-8 .hf img{
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+    .mid-img{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .categories .container .row .col-md-8 .hf .container{
+        height: 100%;
+        width: 100%;
+    }
+    .categories .container .row .col-md-8 .hf .container .txt{
+        font-family: "ProximaNova";
+        text-align: center;
+        font-size: 12px;
+        height: 100%;
+        width: 100%;
+    }
+    /*=================Page Number==================*/
+
+    .categories .container .row .col-md-8 .num{
+        font-size: 16px;
+        text-align: center;
+        padding-top: 20px;
+        height: 57px;
+    }
+}
+
+/* Medius Devices , Desktop */
+@media only screen and (min-width: 992px) {
+    
+    
+}
+
+/* Large Devices, Wide Screen */
+@media only screen and (min-width: 1200px) {
+    
+    
+}
